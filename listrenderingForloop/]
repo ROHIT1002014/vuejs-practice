@@ -1,0 +1,29 @@
+var myapp= new Vue({
+
+    el:"#my-app",
+    data: {
+        students:["rohit","shivam","monika","shubham","spandan", "yashi"],
+        
+
+
+        parentMessage: 'Parent',
+    items: [
+      { message: 'Foo' },
+      { message: 'Bar' }
+    ],
+
+    },
+        methods:{
+
+
+
+
+        },
+
+    computed: {
+
+    }
+
+
+
+})

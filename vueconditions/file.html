@@ -1,0 +1,61 @@
+<html>                                                                          
+    <head>                                                                      
+    <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>            
+    </head>                                                                     
+    <body>                                                                      
+      <div id="my-app">         
+        <!-- vue conditions same as conditional statment --> 
+        <p v-if="true"> this is true statment </p>
+        <p v-else> this is false statment</p>
+
+
+        <p v-if="isActive"> this is if  js statement</p>
+        <p v-else> this is else js stament </p>
+      
+     
+        <p v-if="count<=1" > this is conditinal statment vlue = 1</p>
+        <p v-else-if="count==1" > this is conditinal statment vlue = 2</p>
+        <p v-else-if="count==2" > conditinal statment vlue = 3</p>
+        <p v-else-if="count==3" > this conditinal statment vlue = 4</p>
+        <p v-else-if="count==4" > this is conditinal vlue = 5</p>
+        <p v-else >No value matched </p>
+        <br><br>
+        <button type="button" @click="count++" > click Me</button>
+        <h2> count value is {{ count }} </h2> 
+     
+
+        <p v-if="isActive" id="p"> this is if js statement show tage</p>
+        <p v-else > this is else js stament </p>
+       
+        <p v-show="isActive" id="show"> this is if js statement show tage</p>
+        
+        <!--Because v-if is a directive, it has to be attached to a single element. But what if we want to toggle more than one element? In this case we can use v-if on a <template> element --> 
+        
+        <div v-if="isActive">
+          <p> rohit</p>
+          <p>kumar </p>
+          <p>verma</p>
+        </div>
+
+        <!-- Controlling Reusable Elements with key -->
+
+<template v-if="ok">
+  <h1>Title</h1>
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+</template>
+
+
+        <template v-if="loginType === 'username'">
+  <label>Username</label>
+  <input placeholder="Enter your username">
+</template>
+<template v-else>
+  <label>Email</label>
+  <input placeholder="Enter your email address">
+</template>
+      
+      </div>                                                                    
+      <script src="keyjs.js"></script>                                          
+    </body>                                                                     
+</html>  

@@ -1,0 +1,47 @@
+<html>
+    <head>
+    <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+  <style>
+.fixImageSize{
+height:100px;
+  width:100px;
+}
+  </style>
+
+
+  </style>
+    </head>
+    <body>
+    <div id="my-app">
+      <h3> this is {{ name }} of {{ playlist }}</h3>
+      <p> {{ run('rohit kumar verma') }} </p>
+      <br>
+      <br>
+      <p>{{ greet() }} </p>
+
+      <!-- HTML attribute binding -->
+      <a v-bind:href="ulink" v-bind:title="name"> {{ name1 }} </a>
+      <br>
+      <br>
+      <h2> image is </h2><!-- HTML class binding -->
+      <img v-bind:src="imageLink" v-bind:class="{fixImageSize:isActive}">
+   
+      <br>
+     <br> 
+     <form class=" " method="post"><!-- form input bining -->
+       <input type="text" v-bind:value="name" placeholder="Name"><br><br>
+       <input type="text" v-bind:value="email" placeholder="Email" ><br><br>
+       <button type="button" name="button"> Submit</button>
+
+       <!-- shorhand v-bind , we can use :name rather then v-bind:name it will work -->
+     </form>
+    <br>
+    <br>
+    <!--   {{ htmlcontent }} this is HTML content binding  by this comment will show in inspect so take it into div tag -->
+   <div v-html="htmlcontent"></div>
+
+    </div>
+    <script src="vuejs.js"> </script>
+    </body>
+</html>
+

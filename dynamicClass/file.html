@@ -1,0 +1,29 @@
+<html>                                                                          
+    <head>                                                                      
+    <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>        
+<style>
+button.redClass{
+background:#e91e63;
+  border:2px solid black;
+}
+
+
+button.pinkClass{
+background:pink;
+  border:3px solid blue;
+
+}
+</style>
+    </head>                                                                     
+    <body>                                                                      
+      <div id="my-app">     
+     
+        <br><br>
+        <!-- here due to binding the class , the class which has false vlue will not appear in the html -->
+        <button type="button" @click="changeColor" :class="{redClass:isActive, pinkClass:isActive2}" >click button for change background color  </button >
+
+          </div>
+      <script src="keyjs.js"></script>
+    </body>
+</html>
+         

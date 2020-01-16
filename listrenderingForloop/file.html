@@ -1,0 +1,57 @@
+<html>                                                                          
+    <head>                                                                      
+    <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>            
+    </head>                                                                     
+    <body>                                                                      
+      <div id="my-app"> 
+   
+
+        <ul>
+          <li v-for="child in students"> {{ child }}   </li>
+        </ul>
+
+        <p v-for=" child in students"> {{ child }} </p>
+      
+        <!-- we can also use of in place of in --> 
+        <ul id="exaple2" >
+          <li v-for="(item,index) of items">
+            {{parentMessage }} - {{ index }} - {{ item.message }}
+            </li>
+        </ul>
+      
+     <!-- v-for with an Object -->
+     <ul class="demo">
+  <li v-for="value in object">
+    {{ value }}
+  </li>
+</ul>
+
+
+<div v-for="(value, name) in object">
+  {{ name }}: {{ value }}
+</div>
+
+<br><br>
+
+<div v-for="(value, name, index) in object">
+  <b> {{ index }}.</b> {{ name }}: {{ value }}
+</div>
+<br><br>
+
+<div v-for="teacher in teachers">
+  teacher {{ teacher.name }} and subject {{ teacher.subject }} and location {{ teacher.loction.street }} {{ teacher.loction.city }}  
+  </div>
+    
+
+  <br><br>
+ <!--
+  <p v-for="(addr, index) in teachers.loction">
+  {{ index }} and {{ addr }} 
+  </p>
+
+ -->
+      </div>
+      <script src="keyjs.js"></script>
+    </body>
+</html>
+

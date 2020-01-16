@@ -1,0 +1,38 @@
+<html>                                                                          
+    <head>                                                                      
+    <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>            
+    </head>                                                                     
+    <body>                                                                      
+      <div id="my-app">    
+        <!-- computed property used for quick calculation -->
+
+        {{ runme() }}
+      <br><br>
+  <input type="text" v-model="firstname" placeholder="enter first name"><br><br>
+<input type="text" v-model="lastname" placeholder="enter last name">
+       
+<h4> first name is: {{ firstname }} and last name is: {{ lastname }} <h4>
+    <h2> full name is : {{ fullname }} </h2> 
+
+    <br><br>
+    <h3> enter the number in meter </h3>     
+<input type="text" v-model="number" placeholder="number in meter" ><br><br>
+<h3> number in cm : {{ convertor }} </h3>
+
+<!-- methods will execute everytime when any change but in computed property
+  Vue store the value and then computed that value -->
+  
+      
+  <!-- another example -->
+  <input type="text" v-model="science" placeholder="enter marks in science"><br>
+  <br>
+  <input type="text" v-model="math" placeholder="enter marks in math"><br>
+<br>
+<input type="text" v-model="english" placeholder="enter marks in english "><br>
+<h2> total marks are : {{ totalmarks }} </h2> 
+      
+      </div>
+      <script src="keyjs.js"></script>
+    </body>
+</html>
+      

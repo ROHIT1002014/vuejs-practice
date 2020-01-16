@@ -1,0 +1,20 @@
+<html>                                                                          
+    <head>                                                                      
+    <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>            
+    </head>                                                                     
+    <body>                                                                      
+      <div id="my-app">   
+      <button type="button" v-custom-directive="message" >click me  </button>
+      
+
+
+      <!-- now we pass the argument "rkv" in directive -->
+      <button type="button" v-custom-directive:rkv="message" >click me  </button>
+
+      <!-- now modifier "a" is passed -->
+      <button type="button" v-custom-directive:rkv.a="message" >click me  </button>
+          </div>
+      <script src="keyjs.js"></script>
+    </body>
+</html>
+

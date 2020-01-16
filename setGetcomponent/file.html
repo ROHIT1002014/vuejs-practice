@@ -1,0 +1,22 @@
+<html>                                                                          
+    <head>                                                                      
+    <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>            
+    </head>                                                                     
+    <body>                                                                      
+      <div id="my-app">         
+      
+      
+     <input type="text" placeholder="first name" v-model="fname">
+     <br>
+     <br>
+     <input type="text" placeholder="last name" v-model="lname">
+      <h2> full name is : {{ fulname }} </h2>
+      
+      <!-- if we want to update full name so use setter -->
+      <h2> <input type="text" placeholder="full name " v-model="fulname"> </h2>
+      <h3> updated value is {{ nvalue }} </h3>  
+      </div>                                                                    
+      <script src="keyjs.js"></script>                                          
+    </body>                                                                     
+</html>                                                                         
+       

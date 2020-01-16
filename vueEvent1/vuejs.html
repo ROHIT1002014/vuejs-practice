@@ -1,0 +1,30 @@
+<html>                                                                          
+    <head>                                                                      
+    <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script> 
+    </head>
+    <body>
+    <div id="my-app">
+      <h2> The button below has been clicked {{ counter }} times.</h2>  
+
+      
+      
+      <!-- for event use binding "v-on:click" by this event will binded with method-->
+      <button type="button" v-on:click="increment">Increment in method</button>
+      <button type="button" v-on:click="decrement">Decrement</button>
+      <!-- by this event will bind to attibute -->
+      <button type="button" v-on:click="counter+=1">increment</button>
+   
+      
+      <!-- Instead of binding directly to a method name, we can also use methods in an inline JavaScript statement: -->
+      <button v-on:click="say('hi')">Say hi</button>
+      <button v-on:click="say('what')">Say what</button>
+
+
+      <!-- instead of v-on:click we can use @click both hage same meaning -->
+      <button @click="say('hellow rohit kumar verma')">event for @ </button> 
+    
+    </div>
+      <script src="vuejs.js"></script>
+    </body>
+</html>
+

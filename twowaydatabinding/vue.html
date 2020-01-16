@@ -1,0 +1,80 @@
+<html>                                                                          
+    <head>                                                                      
+    <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>            
+    </head>                                                                     
+    <body>                                                                      
+      <div id="my-app">       
+        <input type="text" @keypress="keypressfunction" placeholder="enter text" >
+      <h3> entered key is {{ character }} </h3>
+  
+        <!-- now two way data binding i.e. v-model which may be used for appending value run this program -->
+
+        <input type="text" v-model="character" placeholder="enter text" >
+
+      <h3> entered key due to two way data binding is  {{ character }} </h3>
+
+      <!-- two way data binding bcs it update character in method in js file and also show update value in {{ character }} -->
+
+        
+        <form> 
+          <input type="text" v-model="name"  placeholder="name" > {{ name }}
+          <br><br> 
+          <input type="text" v-model ="Email" placeholder="email" > {{ Email }}
+
+        </form>
+
+          <!-- binding in checkbox -->
+          <input type="checkbox" id="checkbox" v-model="checked">
+<label for="checkbox">{{ checked }}</label>
+
+  <br><br>
+<!-- for multiple checkbox used array not string -->
+  <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+  <label for="jack">Jack</label>
+  <input type="checkbox" id="john" value="John" v-model="checkedNames">
+  <label for="john">John</label>
+  <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+  <label for="mike">Mike</label>
+  <br>
+  <br><br>
+  <span>Checked names: {{ checkedNames }}</span>
+  <br><br>
+
+<!-- binding in radio button and for working value must be there-->
+<input type="radio" value="One" v-model="picked">
+<label for="one">One</label>
+<br>
+<input type="radio" value="Two" v-model="picked">
+<label for="two">Two</label>
+<br>
+<span>Picked: {{ picked }}</span>
+
+
+<br><br>
+<!-- binding in select option -->
+<select v-model="selected">
+  <option disabled value="">Please select one</option>
+  <option>A</option>
+  <option>B</option>
+  <option>C</option>
+</select><br><br>
+<span>Selected: {{ selected }}</span>
+<br><br>
+
+
+<!-- select multiple -->
+<select v-model="selected1" multiple>
+  <option>A</option>
+  <option>B</option>
+  <option>C</option>
+</select>
+<br>
+<span>Selected: {{ selected1 }}</span>
+
+
+
+        </div>
+      <script src="keyjs.js"></script>
+    </body>
+</html>
+

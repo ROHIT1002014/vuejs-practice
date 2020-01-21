@@ -15,7 +15,7 @@ var app= new Vue({
         
         overfunction: function(event){
             
-            alert("this is message due to mouseover");
+            alert("this is message due to mouseover in vueJs");
 
         },
 
